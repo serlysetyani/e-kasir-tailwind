@@ -11,6 +11,11 @@
     <link href="./css/style.css" rel="stylesheet" />
 
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
@@ -73,7 +78,7 @@
       </header>
 
       <div class="w-full p-6">
-        <form action="/tambahbarang.html">
+        <form action="javascript:void(0)">
           <button
             class="
               w-40
@@ -89,13 +94,16 @@
               hover:bg-green-700
               float-right
             "
+            id="plus"
           >
             Tambah Barang
           </button>
         </form>
-
-        <form class="flex align-center justify-between mt-20 w-f">
-          <div class="flex flex-col mb-4 mx-6">
+        <form
+          class="flex align-center justify-between mt-20 w-f"
+          id="dynamic_form"
+        >
+          <div class="flex flex-col mb-4 mx-6" id="quantity">
             <label class="mb-2 text-gray-900" for="first_name"
               >Nama Barang</label
             >
@@ -280,5 +288,6 @@
         </form>
       </div>
     </section>
+    <script src="./js/dynamic-form.js"></script>
   </body>
 </html>
